@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "CommandJob.h"
 #include <algorithm>
 CommandJob::CommandJob(const std::string name)

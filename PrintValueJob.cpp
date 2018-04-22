@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "PrintValueJob.h"
 #include <iostream>
 #include <string>
