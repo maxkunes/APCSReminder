@@ -88,7 +88,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
@@ -103,7 +103,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -119,7 +119,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -137,7 +137,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -148,12 +148,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ReminderListJob.h" />
+    <ClInclude Include="SoundReminderJob.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandJob.h" />
     <ClInclude Include="CommandProcessor.h" />
     <ClInclude Include="PrintValueJob.h" />
+    <ClInclude Include="Reminder.h" />
     <ClInclude Include="ReminderSystem.h" />
+    <ClInclude Include="SoundReminder.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextReminder.h" />
+    <ClInclude Include="TextReminderJob.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="APCSReminder.cpp" />
@@ -161,6 +167,13 @@
     <ClCompile Include="CommandJob.cpp" />
     <ClCompile Include="CommandProcessor.cpp" />
     <ClCompile Include="PrintValueJob.cpp" />
+    <ClCompile Include="Reminder.cpp" />
+    <ClCompile Include="ReminderListJob.cpp" />
+    <ClCompile Include="ReminderSystem.cpp" />
+    <ClCompile Include="SoundReminder.cpp" />
+    <ClCompile Include="SoundReminderJob.cpp" />
+    <ClCompile Include="TextReminder.cpp" />
+    <ClCompile Include="TextReminderJob.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

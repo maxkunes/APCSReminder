@@ -16,6 +16,9 @@
     <Filter Include="Header Files\CustomJobs">
       <UniqueIdentifier>{eacfdb44-bc8b-4726-b377-d482b6638b7e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\CustomReminders">
+      <UniqueIdentifier>{6a38dbdd-bd78-4c7d-b832-a8c952c18b6f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -36,6 +39,24 @@
     <ClInclude Include="ReminderSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Reminder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextReminder.h">
+      <Filter>Header Files\CustomReminders</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundReminder.h">
+      <Filter>Header Files\CustomReminders</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundReminderJob.h">
+      <Filter>Header Files\CustomJobs</Filter>
+    </ClInclude>
+    <ClInclude Include="ReminderListJob.h">
+      <Filter>Header Files\CustomJobs</Filter>
+    </ClInclude>
+    <ClInclude Include="TextReminderJob.h">
+      <Filter>Header Files\CustomJobs</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="APCSReminder.cpp">
@@ -51,6 +72,27 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Command.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Reminder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReminderSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextReminder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundReminder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundReminderJob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReminderListJob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextReminderJob.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

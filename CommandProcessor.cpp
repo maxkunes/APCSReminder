@@ -17,7 +17,7 @@ void CommandProcessor::AddJobForCommand(std::unique_ptr<CommandJob>& job)
 }
 
 
-bool CommandProcessor::ProcessCommand(const std::string& rawCmd)
+bool CommandProcessor::ProcessCommand(std::string rawCmd)
 {
 
 	auto findInString = [&](const std::string& haystack, char toFind, const size_t startIndex = 0) {
@@ -61,7 +61,7 @@ bool CommandProcessor::ProcessCommand(const std::string& rawCmd)
 	auto nameEndingChar = findInString(rawCmd, ' ', dashChar);
 
 	if (nameEndingChar == std::string::npos)
-		return false;
+		nameEndingChar = rawCmd.length();
 
 	rawCommands.push_back(rawCmd);
 
@@ -85,7 +85,7 @@ bool CommandProcessor::ProcessCommand(const std::string& rawCmd)
 
 		auto argStart = argSearchIndex + 1; // Go past the $ prefix.
 
-		auto argument = rawCmd.substr(argStart, argEnd - argStart); // Grab only the argument out of the text, without the $
+		auto argument = getSubstringString(rawCmd, argStart, argEnd); // Grab only the argument out of the text, without the $
 
 		newCmd.commandArgs.push_back(argument); // Add the argument to the array
 
@@ -102,6 +102,8 @@ bool CommandProcessor::ProcessCommand(const Command & cmd)
 
 	auto& cmdJob = commandJobs[cmd.commandTitle];
 
-	return cmdJob->OnCommand(cmd);
+	auto res =  cmdJob->OnCommand(cmd);
+
+	return res;
 }
 

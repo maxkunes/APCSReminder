@@ -23,7 +23,7 @@ public:
 
 
 	// Processes an incoming command. If the method fails to parse the command or the command is unknown, this will return false indicating failure, else return true
-	bool ProcessCommand(const std::string& rawCmd);
+	bool ProcessCommand(std::string rawCmd);
 
 	bool ProcessCommand(const Command& cmd);
 
