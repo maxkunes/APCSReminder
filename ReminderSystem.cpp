@@ -30,12 +30,12 @@ void ReminderSystem::Tick()
 		for (auto& reminder : reminders) {
 			if (reminder->IsRunning()) {
 				if (reminder->GetTimeLeft().count() <= 0) {
-					reminder->Stop(true);
+					reminder->Stop(true); // Alert reminder that it should trigger. Also mark the reminder as not running.
 				}
 			}
 		}
 
-		std::this_thread::sleep_for(std::chrono::seconds(1));
+		std::this_thread::sleep_for(std::chrono::seconds(1)); // Maximum timer accuracy of 1 second.
 	}
 }
 
