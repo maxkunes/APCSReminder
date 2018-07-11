@@ -7,7 +7,7 @@ cd "C:\Users\admin\source\repos\APCSReminder\concatfolder"
 for /f "eol=: delims=" %%F in ('"%~f0" :FindFiles') do echo(>>"%%F"
 
 :: Merge the text files and prefix each line with file name
-findstr "^" *.cpp >output.log
+findstr "^" *. >output.log
 
 exit /b
 
